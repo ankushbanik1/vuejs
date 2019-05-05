@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="outer">
+ <br>
+ <button type="button"  @click.once="increament(1)">increament 1</button><!-- once_modifyier -->
+<br>
+<br>
+<form  action="#" class="" method="post" @submit.prevent><!-- prevent_modifyier -->
+<button type="submit">submit</button>
+
+</form>
+<div id="parent-div" @click="sumbitclick"><!--  stop_modifyier -->
+    <button id="child-div" type="button" @click.stop="sumbitclick" >button
+    
+    </button>
+    
+    
+    </div>
+    <div id="parent-div" @click.capture="btnclick"> <!--  capture_modifyier -->
+        
+        </button>
+        
+        
+        </div>
+</div>
+   
+</body>
+</html>
+<script src="eventmodify.js"> 
+
+</script>
+

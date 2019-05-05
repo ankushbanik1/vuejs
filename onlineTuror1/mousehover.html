@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+                .fixsize{
+                    
+                  
+                }</style>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+</head>
+<body>
+    <div id="outer">
+       <div class="move-over" @mousemove="mouseover" style="height:200px;
+                    width:200px;
+                    border:1px solid black;" ></div>
+   <samp>{{ x }},{{ y }}</samp>
+   <button type="button" class="move-over" @mousemove="mouseover1">mouseover 1</button>
+   <button type="button"class="move-over" @mouseout="mouseout2">mouseout 1</button>
+
+
+    </div>
+    
+</body>
+</html>
+<script src="mousehover.js"></script>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+    <style>
+    .fixsize{
+        height: 500px;
+        width: 500px;
+    }
+    </style>
+</head>
+<body>
+    <div id="outer">
+      <a v-bind:href="play">{{mass}}</a>
+<img src="imgg" class="{fixsize:isactive}">
+<form method="post">
+
+        <input type="text" :value="textname" placeholder="email" >
+        <input type="text" v-bind:value="textpass" placeholder="password">
+<button type="button">submit</button>
+</form>
+
+  </div>
+   
+</body>
+</html>
+<script src="bind.js"> 
+
+</script>
+

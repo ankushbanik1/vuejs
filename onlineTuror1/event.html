@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="outer">
+ <h3>counter:{{counter}}</h3>
+ <br>
+ <button type="button"  @click="increament(1)">increament 1</button>
+ <button type="button"  @click="dicreament(1)">decreament 1</button>
+ <button type="button"  @click="increament(5)">increament 5</button>
+ <button type="button"  v-on:click="dicreament(5)">decreament 5</button>
+  </div>
+   
+</body>
+</html>
+<script src="event.js"> 
+
+</script>
+

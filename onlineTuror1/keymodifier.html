@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+</head>
+<body>
+    <div id="outer">
+        <input type="text" @keypress.enter="keypressfunction" placeholder="keypress.."> <!-- enter   modifier-->
+        <br>
+
+        <input type="text" @keyup.alt.enter="keyupfunction" placeholder="keyup.."><!-- alt.enter   modifier-->
+        <br>
+        <input type="text" @keydown.ctrl.enter="keydownfunction" placeholder="keydownfunction.."><!-- ctrl.enter   modifier-->
+        <input type="text" @keydown.space="keydownspace" placeholder="keydownspace.."><!-- space modifier-->
+        <input type="text" @keydown.65="keycode" placeholder="keycode.."><!-- space modifier-->
+    </div>
+    
+</body>
+</html>
+<script src="keymodifier.js">
+
+</script>
