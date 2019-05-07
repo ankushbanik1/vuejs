@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+    <style>
+        button.greenclass{
+            color: aliceblue;
+    font-size: 32;
+    font-size: large;
+    background-color: red;
+}
+ button{
+    color: aliceblue;
+    font-size: 32;
+    font-size: large;
+    background-color:green;
+}
+        
+    
+    </style>
+</head>
+<body>
+  
+ 
+ <button type="button" v-bind:class="{greenclass:isactive}" @click="toggle">click to change</button>
+  </div>
+   
+</body>
+</html>
+<script src="dynamiccss.js"> 
+
+</script>
+

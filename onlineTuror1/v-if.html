@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+    <title>vuejs</title>
+</head>
+<body>
+    <div id="outer">
+        <p v-if="isActive"> hello ankush</p>
+        <p v-else>hello banik</p>
+
+
+    <br>
+    <input type="text" v-model="counter">
+    <br>
+    <p v-if="counter==2"> hello ankush 1</p>
+    <p v-else-if="counter==1"> hello ankush 2</p>
+    <p v-else-if="counter==3"> hello ankush 3</p>
+    <p v-else="counter==0">no matched </p>
+
+</body>
+</html>
+<script src="v-if.js">
+
+</script>

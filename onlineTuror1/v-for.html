@@ -1,0 +1,29 @@
+<html>
+   <head>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js" ></script>
+</head>
+
+   <body>
+
+      <div id="outer">
+          <ul>
+            <li v-for="(student,index) in students">{{ index }}-{{ student }}</li>
+          </ul>
+          <ul>
+            <li v-for="teacher in teachers">
+              {{ teacher.name }} teaches {{ teacher.subject }} from {{ teacher.location.street }}, {{ teacher.location.city }}
+            </li>
+          </ul>
+          <ul>
+            <li v-for="teacher in teachers">
+              {{ teacher.name }} teaches {{ teacher.subject }}
+              <p v-for="(addr,index) in teacher.location">
+                  {{ index }} - {{ addr }}
+              </p>
+            </li>
+          </ul>
+      </div>
+
+      <script src="v-for.js"></script>
+   </body>
+</html>
