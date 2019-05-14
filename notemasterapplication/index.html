@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script type="text/javascript"></script>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://davidtkatz.com/public_css/noteMaster.css">
+    <script src="/node_modules/vue-cookie/build/vue-cookie.js'"></script>
+    <title>notemaster</title>
+</head>
+<body>
+       
+    <div id="app">
+<h1>{{ title }}</h1>
+    <div class="form">
+        <div class="form-group">
+            <div class="form-group>">
+<label>Note Title:</label>
+<input type="text" class="form-control" v-model="note.title">
+            </div>
+            <div class="form-group">
+                <label >Text:</label>
+                <textarea  class="form-control" v-model="note.text" ></textarea>
+            </div>
+        </div>
+
+
+        <div class="container">
+<button class="btn btn-success" @click="addnow">Submit</button>
+      </div>
+      
+      <div class=" col-sm-12">
+<div class="col-sm-4 note">
+    <div class="card" v-for="(note,index) in notes">
+        <h3 class="card-title">
+                <button class="close"  @click="removenote(index)">&times;</button>
+
+            {{note.title}}</h3>
+
+            <h4 class="card-subtitle"></h4>
+                    {{ note.date}}
+                    <p class="card-text">
+                        {{note.text}}
+                    </p>
+                    {{getCookie()}}
+                  
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+   
+
+
+   
+    
+    
+
+<script>
+ var app=new Vue({
+ el:'#app',
+ data:{
+   title:"NoteMaster",
+   note:{
+
+       text:"",
+       title:"",
+   } ,
+   notes:[{ 
+       text:"the Goa beach is the best beach in the india, i went there with mahh whole family  ",
+       title:"Goa sea beach",
+       date:new Date(Date.now()).toLocaleString()
+   }]
+   
+ },
+ methods:{
+     addnow(){
+         let {text,title}=this.note
+         this.notes.push({
+             title,
+             text,
+             date:new Date(Date.now()).toLocaleString()
+
+          } )
+     },
+     removenote(index){
+this.notes.splice(index,1)
+     },
+    
+ }
+ });
+
+</script>
+</body>
+</html>
